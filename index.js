@@ -5,9 +5,10 @@ const app = express();
 const port = process.env.PORT || 3100;
 const corsConfig ={
     origin:"*",
-    Credential:true,
-    method : ["GET", "POST", "PUT", "DELETE"]
-}
+    Credential : true,
+    method : ["GET", "POST", "PUT", "DELETE"],
+};
+app.options("", cors(corsConfig));
 app.use(cors(corsConfig));
 app.use(bodyParser.urlencoded({extended:true}));
 
