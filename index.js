@@ -13,7 +13,7 @@ const port = process.env.PORT || 3100;
 // app.use(bodyParser.urlencoded({extended:true}));
 
 
-app.get("/", (req, res)=>{
+app.get("/random", (req, res)=>{
     const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thur","Fri", "Sat"];
     const d = new Date();
     const day = d.getDay();
