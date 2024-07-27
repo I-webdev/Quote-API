@@ -186,4 +186,3 @@ const motivations = [
     Motivation:"Sunday is the perfect day to refuel your soul and be grateful for each and every one of your blessings."}
 ];
 
-module.exports = app;
