@@ -2,8 +2,13 @@ import express from "express";
 import cors from "cors"
 import bodyParser from "body-parser";
 const app = express();
-const port =process.env.PORT || 3100;
-app.use(cors());
+const port = process.env.PORT || 3100;
+const corsConfig ={
+    origin:"*",
+    Credential:true,
+    method : ["GET", "POST", "PUT", "DELETE"]
+}
+app.use(cors(corsConfig));
 app.use(bodyParser.urlencoded({extended:true}));
 
 
