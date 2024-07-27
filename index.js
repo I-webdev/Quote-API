@@ -1,12 +1,13 @@
 import express from "express";
+import cors from "cors"
 import bodyParser from "body-parser";
 const app = express();
 const port =process.env.PORT || 3100;
-
+app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
 
 
-app.get("/api", (req, res)=>{
+app.get("/", (req, res)=>{
     const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thur","Fri", "Sat"];
     const d = new Date();
     const day = d.getDay();
