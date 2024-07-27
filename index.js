@@ -55,7 +55,7 @@ const motivations = [
   
 {_id: 6,
     Day: "Satur",
-    Motivation:"Don’t let the weekend be your weak end. Stay strong, stay motivated."},
+    Motivation:"Do not let the weekend be your weak end. Stay strong, stay motivated."},
 
     {_id: 7,
     Day: "Sun",
