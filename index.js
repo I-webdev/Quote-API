@@ -1,16 +1,16 @@
 import express from "express";
-import cors from "cors"
-import bodyParser from "body-parser";
+// import cors from "cors"
+// import bodyParser from "body-parser";
 const app = express();
 const port = process.env.PORT || 3100;
-const corsConfig ={
-    origin:"*",
-    Credential : true,
-    method : ["GET", "POST", "PUT", "DELETE"],
-};
-app.options("", cors(corsConfig));
-app.use(cors(corsConfig));
-app.use(bodyParser.urlencoded({extended:true}));
+// const corsConfig ={
+//     origin:"*",
+//     Credential : true,
+//     method : ["GET", "POST", "PUT", "DELETE"],
+// };
+// app.options("", cors(corsConfig));
+// app.use(cors(corsConfig));
+// app.use(bodyParser.urlencoded({extended:true}));
 
 
 app.get("/", (req, res)=>{
