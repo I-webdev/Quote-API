@@ -14,7 +14,7 @@ const port = process.env.PORT || 3100;
 
 
 app.get("/random", (req, res)=>{
-    const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thur","Fri", "Sat"];
+    const weekdays = ["Sun", "Mon", "Tues", "Wednes", "Thurs","Fri", "Satur"];
     const d = new Date();
     const day = d.getDay();
     const dayName = weekdays[day];
@@ -44,7 +44,7 @@ const motivations = [
     Motivation:"Success is to wake up each morning and consciously decide that today will be the best day of your life."},
 
     {_id: 2,
-    Day: "Tue",
+    Day: "Tues",
     Motivation:"The only way to do great work is to love what you do."},
 
     {_id: 3,
@@ -52,7 +52,7 @@ const motivations = [
     Motivation:"Success is the sum of small efforts, repeated day in and day out."},
     
     {_id: 4,
-        Day: "Thur",
+        Day: "Thurs",
         Motivation:"Thursday is a perfect day to start turning your dreams into reality."},
     
     {_id: 5,
@@ -72,7 +72,7 @@ const motivations = [
         Motivation:"The biggest thrill wasn’t in winning on Sunday but in meeting the payroll on Monday."},
     
     {_id: 9,
-        Day: "Tue",
+        Day: "Tues",
         Motivation:"It does not matter how slowly you go, as long as you do not stop."},
  
 
@@ -81,7 +81,7 @@ const motivations = [
     Motivation:"The way to get started is to quit talking and begin doing."},
 
     {_id: 11,
-    Day: "Thur",
+    Day: "Thurs",
     Motivation:"Embrace the challenges of this Thursday, for they will lead you to great opportunities."},
     
     {_id: 12,
@@ -102,7 +102,7 @@ const motivations = [
     Motivation:"The future depends on what you do today."},
     
     {_id: 16,
-        Day: "Tue",
+        Day: "Tues",
         Motivation:"The only person you should try to be better than is the person you were yesterday."},
     
     {_id: 17,
@@ -111,7 +111,7 @@ const motivations = [
  
 
         {_id: 18,
-    Day: "Thur",
+    Day: "Thurs",
     Motivation:"Success is not achieved overnight; it’s the result of consistent effort. Keep pushing forward this Thursday."},
 
     {_id: 19,
@@ -132,7 +132,7 @@ const motivations = [
     Motivation:"Monday is for people with a mission. Those who favor vacations, not weekends"},
 
     {_id: 23,
-    Day: "Tue",
+    Day: "Tues",
     Motivation:"Each Tuesday is a blank canvas. Paint it with purpose, passion, and unwavering determination."},
     
     {_id: 24,
@@ -140,7 +140,7 @@ const motivations = [
         Motivation:"Life is about making an impact, changing things, and leaving things better than you found them."},
     
     {_id: 25,
-        Day: "Thur",
+        Day: "Thurs",
         Motivation:"Don’t wait for Friday to be happy. Find joy in every moment, including this Thursday."},
  
         {_id: 26,
@@ -161,7 +161,7 @@ const motivations = [
     Motivation:"Okay, it's Monday but who said Mondays have to suck? Be a rebel and have a great day anyway."},
     
     {_id: 30,
-        Day: "Tue",
+        Day: "Tues",
         Motivation:"Focus on progress, not perfection. Let Tuesday be a day of growth and improvement."},
     
     {_id: 31,
@@ -169,7 +169,7 @@ const motivations = [
         Motivation:"Keep the big picture in mind. Ask yourself how you can change the world for the better this Wednesday."},
  
         {_id: 32,
-        Day: "Thur",
+        Day: "Thurs",
         Motivation:"Be fearless in the pursuit of what sets your soul on fire, even on a Thursday."},
     
     {_id: 33,
