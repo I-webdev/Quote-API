@@ -1,16 +1,6 @@
 import express from "express";
-// import cors from "cors"
-// import bodyParser from "body-parser";
 const app = express();
 const port = process.env.PORT || 3100;
-// const corsConfig ={
-//     origin:"*",
-//     Credential : true,
-//     method : ["GET", "POST", "PUT", "DELETE"],
-// };
-// app.options("", cors(corsConfig));
-// app.use(cors(corsConfig));
-// app.use(bodyParser.urlencoded({extended:true}));
 
 
 app.get("/random", (req, res)=>{
@@ -20,16 +10,18 @@ app.get("/random", (req, res)=>{
     const dayName = weekdays[day];
     const motivationForTheDay = motivations.filter((motivation)=>motivation.Day === dayName);
     const randomIndexmotivationForTheDay = Math.floor(Math.random() * motivationForTheDay.length);
-    const aMotivation = motivationForTheDay[randomIndexmotivationForTheDay];
+    const aMotivation = motivationForTheDay[randomIndexmotivationForTheDay]; 
     res.json(aMotivation);
 });
 
-app.get("/motivate", (req, res)=>{
-    if (motivations) {
-        res.json(motivations);
+
+app.get("/motivate/:_id", (req, res)=>{
+    const id = (req.params._id);
+    const foundJoke = motivations.find((motivation) => motivation._id === id);
+        res.json(foundJoke);
     }
     
-});
+);
 
 
 
@@ -39,149 +31,149 @@ app.listen(port, ()=>{
 
 
 const motivations = [
-    {_id: 1,
+    {_id: "1",
     Day: "Mon",
     Motivation:"Success is to wake up each morning and consciously decide that today will be the best day of your life."},
 
-    {_id: 2,
+    {_id: "2",
     Day: "Tues",
     Motivation:"The only way to do great work is to love what you do."},
 
-    {_id: 3,
+    {_id: "3",
     Day: "Wednes",
     Motivation:"Success is the sum of small efforts, repeated day in and day out."},
     
-    {_id: 4,
+    {_id: "4",
         Day: "Thurs",
         Motivation:"Thursday is a perfect day to start turning your dreams into reality."},
     
-    {_id: 5,
+    {_id: "5",
         Day: "Fri",
         Motivation:"Congratulations on making it to the end of the week! But before diving headfirst into the weekend, one more day to stay motivated and focused."},
   
-{_id: 6,
+{_id: "6",
     Day: "Satur",
     Motivation:"Do not let the weekend be your weak end. Stay strong, stay motivated."},
 
-    {_id: 7,
+    {_id: "7",
     Day: "Sun",
     Motivation:"Sunday is a day to dream big, set audacious goals, and believe in your ability to make them a reality."},
     
-    {_id: 8,
+    {_id: "8",
         Day: "Mon",
         Motivation:"The biggest thrill wasn’t in winning on Sunday but in meeting the payroll on Monday."},
     
-    {_id: 9,
+    {_id: "9",
         Day: "Tues",
         Motivation:"It does not matter how slowly you go, as long as you do not stop."},
  
 
-        {_id: 10,
+        {_id: "10",
     Day: "Wednes",
     Motivation:"The way to get started is to quit talking and begin doing."},
 
-    {_id: 11,
+    {_id: "11",
     Day: "Thurs",
     Motivation:"Embrace the challenges of this Thursday, for they will lead you to great opportunities."},
     
-    {_id: 12,
+    {_id: "12",
         Day: "Fri",
         Motivation:"Oh! It’s Friday again. Share the love that was missing during the week. In a worthy moment of peace and bliss."},
     
-    {_id: 13,
+    {_id: "13",
         Day: "Satur",
         Motivation:"Saturday shines when you do. Keep shining."},
  
 
-        {_id: 14,
+        {_id: "14",
     Day: "Sun",
     Motivation:"Sunday is your best day. You know you had an amazing week. Time to recover and think how you gonna kill the next one."},
 
-    {_id: 15,
+    {_id: "15",
     Day: "Mon",
     Motivation:"The future depends on what you do today."},
     
-    {_id: 16,
+    {_id: "16",
         Day: "Tues",
         Motivation:"The only person you should try to be better than is the person you were yesterday."},
     
-    {_id: 17,
+    {_id: "17",
         Day: "Wednes",
         Motivation:"The only thing that can grow is the thing you give energy to."},
  
 
-        {_id: 18,
+        {_id: "18",
     Day: "Thurs",
     Motivation:"Success is not achieved overnight; it’s the result of consistent effort. Keep pushing forward this Thursday."},
 
-    {_id: 19,
+    {_id: "19",
     Day: "Fri",
     Motivation:"The best preparation for tomorrow is doing your best today."},
     
-    {_id: 20,
+    {_id: "20",
         Day: "Satur",
         Motivation:"Saturday is a day to remember that you are stronger than you think."},
     
-    {_id: 21,
+    {_id: "21",
         Day: "Sun",
         Motivation:"Sunday is a day to clear your mind of all the clutter and start anew."},
  
 
-        {_id: 22,
+        {_id: "22",
     Day: "Mon",
     Motivation:"Monday is for people with a mission. Those who favor vacations, not weekends"},
 
-    {_id: 23,
+    {_id: "23",
     Day: "Tues",
     Motivation:"Each Tuesday is a blank canvas. Paint it with purpose, passion, and unwavering determination."},
     
-    {_id: 24,
+    {_id: "24",
         Day: "Wednes",
         Motivation:"Life is about making an impact, changing things, and leaving things better than you found them."},
     
-    {_id: 25,
+    {_id: "25",
         Day: "Thurs",
         Motivation:"Don’t wait for Friday to be happy. Find joy in every moment, including this Thursday."},
  
-        {_id: 26,
+        {_id: "26",
         Day: "Fri",
         Motivation:"No matter what happened yesterday, it is insignificant when compared to what lies within the core of your being today."},
     
-    {_id: 27,
+    {_id: "27",
         Day: "Satur",
         Motivation:"Saturday is a day to remember that you are one step closer to your dreams."},
  
 
-        {_id: 28,
+        {_id: "28",
     Day: "Sun",
     Motivation:"Sunday clears away the rust of the whole week."},
 
-    {_id: 29,
+    {_id: "29",
     Day: "Mon",
     Motivation:"Okay, it's Monday but who said Mondays have to suck? Be a rebel and have a great day anyway."},
     
-    {_id: 30,
+    {_id: "30",
         Day: "Tues",
         Motivation:"Focus on progress, not perfection. Let Tuesday be a day of growth and improvement."},
     
-    {_id: 31,
+    {_id: "31",
         Day: "Wednes",
         Motivation:"Keep the big picture in mind. Ask yourself how you can change the world for the better this Wednesday."},
  
-        {_id: 32,
+        {_id: "32",
         Day: "Thurs",
         Motivation:"Be fearless in the pursuit of what sets your soul on fire, even on a Thursday."},
     
-    {_id: 33,
+    {_id: "33",
         Day: "Fri",
         Motivation:"Happy Friday! You’re responsible for the energy of your day. Remember, when you give off positive energy, you attract it! Decide to be Happy!"},
  
 
-        {_id: 34,
+        {_id: "34",
     Day: "Satur",
     Motivation:"Saturday is a day to remember that every accomplishment starts with the decision to try."},
 
-    {_id: 35,
+    {_id: "35",
     Day: "Sun",
     Motivation:"Sunday is the perfect day to refuel your soul and be grateful for each and every one of your blessings."}
 ];
